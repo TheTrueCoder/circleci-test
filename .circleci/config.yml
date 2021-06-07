@@ -11,3 +11,11 @@ jobs:
       - run:
           name: "List repo dir"
           command: ls -R
+workflows:
+  version: 2
+  tagged-build:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /^(.*?)-release$/

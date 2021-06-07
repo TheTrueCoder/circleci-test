@@ -16,9 +16,11 @@ jobs:
           command: cat ./text.txt
 workflows:
   version: 2
-  tagged-build:
+  release:
     jobs:
       - build:
           filters:
             tags:
               only: /^(.*?)-release$/
+            branches:
+              ignore: /.*/

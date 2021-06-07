@@ -8,3 +8,6 @@ jobs:
       - run:
           name: "Say hi!"
           command: echo "Hello, CI"
+      - run:
+          name: "List repo dir"
+          command: ls -R

@@ -11,6 +11,9 @@ jobs:
       - run:
           name: "List repo dir"
           command: ls -R
+      - run:
+          name: "Read text.txt"
+          command: cat ./text.txt
 workflows:
   version: 2
   tagged-build:
